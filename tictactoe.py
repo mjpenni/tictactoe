@@ -1,4 +1,18 @@
 ﻿#tictactoe.py
+def var_def():
+    board_key=[]
+    board_key=["1|2|3","-+-+-","4|5|6","-+-+-","7|8|9"]
+    board=[0,1,2,3]
+    boardB = board[1] = board[2] = board[3] = "___|___|___"
+    boardD='-----------'
+    box_pos={"1":(1,1), "2":(5,1), "3":(9,1), "4":(1,2), "5":(5,2), "6":(9,2), "7":(1,3), "8":(5,3), "9":(9,3)}
+    print(box_pos)
+    #pos_box[1]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
+    #pos_box[2]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
+    #pos_box[3]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
+    win_list=("789","456","123", "147", "258", "369","159", "357")
+
+
 def print_board():
     print(board_key[0]+"/c/l"+board_key[1]+"/c/l"+board_key[2]+"/c/l")
     print(boardB)
@@ -18,10 +32,10 @@ def select_box(player):
     box = input("What box number do you want to put an "+player+"? ")
     row_column = box_pos[str(box)]
     print(row_column) # debug
-    print(row_column[0]) # debug
-    print(row_column[1]) # debug
-    board=[]
-    board[row_column[0],row_column[1]]=player
+    r0=row_column[0]
+    r1=row_column[1]
+    board[row_column[0]][row_column[1]]=player
+    #board[r0,r1]=player
     
 def win_rows_build(): 
     # verticals: row_147, row_258, row_369 
@@ -71,16 +85,7 @@ def char_pos(square):
 #-------------------------------------------------------------------------------------
     
 #main
-board_key=("1|2|3","-+-+-","4|5|6","-+-+-","7|8|9")
-#boardB = board[1] = board[2] = board[3] = ['_','_','_','|','_','_','_','|','_','_','_']
-boardD='-----------'
-box_pos={"1":(1,1), "2":(5,1), "3":(9,1), "4":(1,2), "5":(5,2), "6":(9,2), "7":(1,3), "8":(5,3), "9":(9,3)}
-#pos_box[1]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
-#pos_box[2]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
-#pos_box[3]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
-
-
-win_list=("789","456","123", "147", "258", "369","159", "357")
+var_def()
 print('Welcome to TicTacToe')
 win_x='XXX'
 win_0='OOO'
@@ -111,7 +116,7 @@ while go not in "YNQ":
     elif go == 'Y' or go == 'y':
         # start game
         go="Y"
-        print_board
+        print_board()
         turns += 1
         # player 1 make selection & after 3 check for win
         select_box(player1)
