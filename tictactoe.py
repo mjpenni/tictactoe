@@ -1,6 +1,6 @@
 #tictactoe.py
 def var_def():
-    pass 
+    pass
 
 def print_board():
     print(board_key[0]+"\r\n"+board_key[1]+"\r\n"+board_key[2]+"\r\n"+
@@ -74,6 +74,7 @@ def __main__():
     var_def()
 
 #-----------------------------------------------------------------------------------
+import tictactoe_vars as vars
 
 if __name__ == "__main__":
     __main__()
