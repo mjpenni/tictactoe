@@ -1,94 +1,97 @@
-﻿#tictactoe.py
+#tictactoe.py
 def var_def():
-    board_key=[]
-    board_key=["1|2|3","-+-+-","4|5|6","-+-+-","7|8|9"]
-    board=[0,1,2,3]
-    boardB = board[1] = board[2] = board[3] = "___|___|___"
-    boardD='-----------'
-    box_pos={"1":(1,1), "2":(5,1), "3":(9,1), "4":(1,2), "5":(5,2), "6":(9,2), "7":(1,3), "8":(5,3), "9":(9,3)}
-    print(box_pos)
-    #pos_box[1]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
-    #pos_box[2]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
-    #pos_box[3]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
-    win_list=("789","456","123", "147", "258", "369","159", "357")
-
+    pass 
 
 def print_board():
-    print(board_key[0]+"/c/l"+board_key[1]+"/c/l"+board_key[2]+"/c/l")
-    print(boardB)
-    print(board1)
-    print(boardB)
-    print(boardD)
-    print(boardB)
-    print(board2)
-    print(boardB)
-    print(boardD)
-    print(boardB)
-    print(board3)
-    print(boardB)
-
+    print(board_key[0]+"\r\n"+board_key[1]+"\r\n"+board_key[2]+"\r\n"+
+          board_key[3]+"\r\n"+board_key[4]+"\r\n")
+    #print(boardB)
+    print(board[0])
+    print(board[1])
+    # print(boardB)
+    #print(boardD)
+    #print(boardB)
+    print(board[2])
+    #print(boardB)
+    #print(boardD)
+    #print(boardB)
+    print(board[3])
+    #print(boardB)
 
 def select_box(player):
-    box = input("What box number do you want to put an "+player+"? ")
+    box = input("In what box number do you want to put an "+player+"? ")
     row_column = box_pos[str(box)]
     print(row_column) # debug
     r0=row_column[0]
     r1=row_column[1]
-    board[row_column[0]][row_column[1]]=player
-    #board[r0,r1]=player
-    
-def win_rows_build(): 
-    # verticals: row_147, row_258, row_369 
+    #board[row_column[0]][row_column[1]]=player
+    board[r0,r1]=player
+
+def win_rows_build():
+    # verticals: row_147, row_258, row_369
     # horizontals: row_123, row_456, row_789
     # diagonals: row_159, row_357
 
-
-    # for each verticle, horizontal, diagonal: 
-    # build horizontal rows beginning with 1, 4, 7    
+    # for each verticle, horizontal, diagonal:
+    # build horizontal rows beginning with 1, 4, 7
     row_123=row_456=row_789=0
     row_123+=board[1][1]+board[1][5]+board[1][9]
-    row_456+=board[2][1]+board[2][5]+board[2][9] 
-    row_789+=board[3][1]+board[3][5]+board[3][9] 
-    
+    row_456+=board[2][1]+board[2][5]+board[2][9]
+    row_789+=board[3][1]+board[3][5]+board[3][9]
+
     # build vertical row begtinning with 1, 2, 3
     row_147=row_258=row_369=0
     row_147+=board[1][1]+board[2][1]+board[3][1]
-    row_258+=board[1][5]+board[2][5]+board[3][5] 
-    row_369+=board[1][9]+board[2][9]+board[3][9]  
-    
+    row_258+=board[1][5]+board[2][5]+board[3][5]
+    row_369+=board[1][9]+board[2][9]+board[3][9]
+
     # build diagonal rows biginning with 1, 3
     row_159=row_357=0
     row_159+=board[1][1]+board[2][5]+board[3][9]
     row_357+=board[1][9]+board[2][5]+board[3][1]
-    
+
     # put rows in an list so they can be interated easily
     win_rows=[row_123, row_456, row_789, row_147, row_258, row_369, row_159, row_357]
 
+    def win_test():
+        # test X's or O's for winning configuration
+            for row in win_rows:
+                if row == win_x:
+                    print('X wins')
+                    restart_flag="Y"
+                elif row == win_o:
+                    print('O wins')
+                    restart_flag="Y"
+                else:
+                    print('Keep playing. No winner yet')
+                    restart_flag="N"
 
-def win_test():        
-    # test X's or O's for winning configuration
-        for row in win_rows:
-            if row == win_x:
-                print('X wins')
-                restart_flag="Y"
-            elif row == win_o:
-                print('O wins')
-                restart_flag="Y"
-            else:
-                print('Keep playing. No winner yet')
-                restart_flag="N"
 def char_pos(square):
     # lookup square (key) & return char_pos & row
     pass
 
+def __main__():
+    var_def()
 
-#-------------------------------------------------------------------------------------
-    
-#main
-var_def()
+#-----------------------------------------------------------------------------------
+
+if __name__ == "__main__":
+    __main__()
 print('Welcome to TicTacToe')
-win_x='XXX'
-win_0='OOO'
+win_x = 'XXX'
+win_0 = 'OOO'
+board_key = ["1|2|3", "-+-+-", "4|5|6", "-+-+-", "7|8|9"]
+board = [0,1,2,3]
+#boardB = board[1] = board[2] = board[3] = "|___|___|___|"
+board[1] = board[2] = board[3] = "|_|_|_|"
+board[0]=",_____,"
+#boardD = '-----------'
+box_pos = {"1":(1,1), "2":(5,1), "3":(9,1), "4":(1,2), "5":(5,2), "6":(9,2), "7":(1,3), "8":(5,3), "9":(9,3)}
+print(box_pos)
+#pos_box[1]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
+#pos_box[2]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
+#pos_box[3]={"1":1, '5':2, '9':3, "1":4, '5':5, '9':6, "1":7, '5':8, '9':9}
+win_list = ("789","456","123", "147", "258", "369","159", "357")
 # player 1 selection of X or O
 player1="N"
 while player1 not in 'XO':
@@ -97,15 +100,14 @@ while player1 not in 'XO':
         player1="X"
     elif player1=="o":
         player1="O"
-    if player1=="X":
-        player2="O"
-    elif player1=="O":
-        player2="X"
-    else:
-        print("Please enter X or O.")
+        if player1=="X":
+            player2="O"
+        elif player1=="O":
+            player2="X"
+        else:
+            print("Please enter X or O.")
 
-
-print("player 1 will go first as " + player1)
+    print("player 1 will go first as " + player1)
 go="S"
 turns=0
 while go not in "YNQ":
@@ -129,4 +131,4 @@ while go not in "YNQ":
             win_test()
     else:
         pass
-        # quit game
+#quit game
