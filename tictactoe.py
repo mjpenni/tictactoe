@@ -20,7 +20,7 @@ def print_board():
 
 def select_box(player):
     vars.box = input("In what box number do you want to put an "+player+"? ")
-    vars.row_column = box_pos[str(vars.box)]
+    vars.row_column = vars.box_pos[str(vars.box)]
     print(vars.row_column) # debug
     vars.r0=vars.row_column[0]
     vars.r1=vars.row_column[1]
@@ -121,11 +121,13 @@ while go not in "YNQ":
         go="Y"
         print_board()
         turns += 1
+        #print('got here')
         # player 1 make selection & after 3 check for win
         select_box(player1)
         # player 2 make selection & after 3 check for win
         select_box(player2)
         print('got here')
+        select_box(player2)
         if turns>=3:
             #check for win
             win_rows_build()
