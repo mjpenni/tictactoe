@@ -1,18 +1,4 @@
-#tictactoe.py
-def print_board():
-    print(board_key[0]+"/c/l"+board_key[1]+"/c/l"+board_key[2]+"/c/l")
-    print(boardB)
-    print(board1)
-    print(boardB)
-    print(boardD)
-    print(boardB)
-    print(board2)
-    print(boardB)
-    print(boardD)
-    print(boardB)
-    print(board3)
-    print(boardB)
-
+#tictac2.py
 def select_box(player):
     box = input("What box number do you want to put an {player}?")
     row_column() = box_position(str(box))

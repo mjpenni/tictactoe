@@ -1,0 +1,14 @@
+build board
+1=x first player player1, 2=0 second player player2
+first player player1 selects location
+Distplay 'X' in selected location
+test for 3 x's in a row. Horizontal, Vertical, Down-right diaginal, Down-left ciaginal
+If win then
+  banner 'X win!'
+  end
+second player player2 selects location
+Distplay 'O' in selected location
+test for 3 O's in a row. Horizontal, Vertical, Down-right diaginal, Down-left ciaginal
+If win then
+  banner 'O win!'
+  end
