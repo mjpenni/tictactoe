@@ -1,18 +1,4 @@
-#tictactoe.py
-def print_board():
-    print(board_key[0]+"/c/l"+board_key[1]+"/c/l"+board_key[2]+"/c/l")
-    print(boardB)
-    print(board1)
-    print(boardB)
-    print(boardD)
-    print(boardB)
-    print(board2)
-    print(boardB)
-    print(boardD)
-    print(boardB)
-    print(board3)
-    print(boardB)
-
+#tictac2.py
 def select_box(player):
     box = input("What box number do you want to put an {player}?")
     row_column() = box_position(str(box))
@@ -63,6 +49,8 @@ def char_pos(square):
 #-------------------------------------------------------------------------------------
     
 #main
+import sim_print
+import game_vars2
 from game_vars.py import #function file name (sans .py)
 board_key=["1|2|3","-+-+-","4|5|6","-+-+-","7|8|9"]
 boardB, board[1], board[2], board[3]=['_','_','_','|','_','_','_','|','_','_','_']
@@ -78,6 +66,10 @@ win_x='XXX'
 win_0='OOO'
 # player 1 selection of X or O
 player1="N"
+
+#print(boardB[0],boardB[1],boardB[2],boardB[3])
+print(boardD)
+
 while player1 not in 'XO':
     player1=input('player 1: Do you want to be "X" or "O" ?')
     if player1=="X":
