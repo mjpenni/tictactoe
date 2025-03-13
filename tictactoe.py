@@ -76,5 +76,6 @@ while go not in "YNQ":
             win_test()
     else:
         pass
+        # small test change
         # quit game
 
