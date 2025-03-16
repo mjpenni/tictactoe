@@ -11,7 +11,7 @@ for turns = 1,2.3:
         Display 'O' in selected location
         victory_test("O")
         display board
-    elif
+    else:
         print (banner)
 	end
 
@@ -19,6 +19,8 @@ for turns = 1,2.3:
 def victory_test(parameter)   parameter = "X" or "O"
 --------------------------
 test for 3 parameter's in a row. Horizontal, Vertical, Down-right diaginal, Down-left diaginal
+(put victory test here. Set win to true)
+
 # set victory banner
 banner = ''
 If win:
