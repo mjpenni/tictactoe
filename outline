@@ -1,14 +1,29 @@
 build board grid
-1=x first player player1, 2=0 second player player2
-first player player1 selects location
-Display 'X' in selected location
-test for 3 x's in a row. Horizontal, Vertical, Down-right diaginal, Down-left diaginal
-If win then
-  banner = 'X win!'
-  end
-second player player2 selects location
-Display 'O' in selected location
-test for 3 O's in a row. Horizontal, Vertical, Down-right diaginal, Down-left diaginal
-If win then
-  banner = 'O win!'
+display board (empty at this time)
+1=X first player player1, 2=0 second player player2
+for turns = 1,2.3:
+    first player player1 selects location
+    Display 'X' in selected location
+    victory_test("X")
+    display board
+    if banner <> '':
+        second player player2 selects location
+        Display 'O' in selected location
+        victory_test("O")
+        display board
+    elif
+        print (banner)
+	end
+
+===========================
+def victory_test(parameter)   parameter = "X" or "O"
+--------------------------
+test for 3 parameter's in a row. Horizontal, Vertical, Down-right diaginal, Down-left diaginal
+# set victory banner
+banner = ''
+If win:
+  if parameter = "X": 
+     banner = 'X win!'
+  if parameter = "O"":
+     banner = 'O win!'
   end
