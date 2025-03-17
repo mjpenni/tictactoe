@@ -4,23 +4,16 @@
 
 # for each verticle, horizontal, diagonal:
 # build horizontal rows beginning with 1, 4, 7
-row_123=row_456=row_789="0"
-#row_456=row_456+board[2][1]+board[2][3]+board[2][5]
-#row_789=row_789+board[3][1]+board[3][3]+board[3][5]
+row_123=row_456=row_789=["!","!","!","!"]
 
 # build vertical row begtinning with 1, 2, 3
-row_147=row_258=row_369="0"
-#row_147=row_147+board[1][1]+board[2][1]+board[3][1]
-#row_258+=board[1][3]+board[2][3]+board[3][3]
-#row_369+=board[1][5]+board[2][5]+board[3][5]
+row_147=row_258=row_369=["!","!","!","!"]
 
 # build diagonal rows biginning with 1, 3
-row_159=row_357="0"
-#row_159=row_159+board[1][1]+board[2][3]+board[3][5]
-#row_357=row_357+board[1][5]+board[2][3]+board[3][1]
+row_159=row_357=["!","!","!","!"]
 
 # put rows in an list so they can be interated easily
-win_rows=[row_123, row_456, row_789, row_147, row_258, row_369, row_159, row_357]
+board_rows=[row_123, row_456, row_789, row_147, row_258, row_369, row_159, row_357]
 
 win_x = 'XXX'
 win_0 = 'OOO'
