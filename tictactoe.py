@@ -5,18 +5,6 @@ def select_box(player):
     row_column() = box_position(str(box))
     board[row_column(0),row_column(1)]=player
 
-def win_test():        
-    # test X's or O's for winning configuration
-        for row in win_rows:
-            if row == win_x:
-                print ('X wins')
-                restart_flag="Y"
-            elif row == win_o:
-                print ('O wins')
-                restart_flag="Y"
-            else:
-                print ('Keep playing. No winner yet')
-                restart_flag="N"
 def char_pos(square):
     # lookup square (key) & return char_pos & row
     pass
@@ -27,20 +15,8 @@ def char_pos(square):
 import sim_print
 import game_vars
 from game_board.py import win_rows_build
-board_key=["1|2|3","-+-+-","4|5|6","-+-+-","7|8|9"]
-boardB, board[1], board[2], board[3]=['_','_','_','|','_','_','_','|','_','_','_']
-boardD='-----------'
-
-win_list=("789","456","123", "147", "258", "369","159", "357")
-print('Welcome to TicTacToe')
-win_x='XXX'
-win_0='OOO'
-# player 1 selection of X or O
+import victory_test
 player1="N"
-
-#print(boardB[0],boardB[1],boardB[2],boardB[3])
-print(boardD)
-
 while player1 not in 'XO':
     player1=input('player 1: Do you want to be "X" or "O" ?')
     if player1=="X":
