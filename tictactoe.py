@@ -12,9 +12,11 @@ def char_pos(square):
 #-------------------------------------------------------------------------------------
     
 #main
-import sim_print
+# import sim_print eh?
+import build_board
+import display_board
 import game_vars
-from game_board.py import win_rows_build
+# from game_board.py import win_rows_build (defunct
 import victory_test
 player1="N"
 while player1 not in 'XO':
