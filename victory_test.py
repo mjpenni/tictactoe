@@ -9,30 +9,30 @@
 #1 of 8 successful tests mean victory: win=true
 Xwin=false
    # horizontal
-if (rows_123[1] and rows_123[2] and rows_123[3] == "X") or
-   (rows_456[1] and rows_456[2] and rows_456[3] == "X") or
-   (rows_789[1] and rows_789[2] and rows_789[3] == "X") or
+if (row_123[1] == "X" and row_123[2] == "X" and row_123[3] == "X") or 
+   (row_456[1] == "X" and row_456[2] == "X" and row_456[3] == "X") or 
+   (row_789[1] == "X" and row_789[2] == "X" and row_789[3] == "X") or 
    # vertical
-   (rows_147[1] and rows_147[2] and rows_147[3] == "X") or
-   (rows_258[1] and rows_258[2] and rows_258[3] == "X") or
-   (rows_369[1] and rows_369[2] and rows_369[3] == "X") or
+   (row_147[1] == "X" and row_147[2] == "X" and row_147[3] == "X") or 
+   (row_258[1] == "X" and row_258[2] == "X" and row_258[3] == "X") or 
+   (row_369[1] == "X" and row_369[2] == "X" and row_369[3] == "X") or 
    # diagonal
-   (rows_159[1] and rows_159[2] and rows_159[3] == "X") or
-   (rows_357[1] and rows_357[2] and rows_357[3] == "X"):
-   Xwin=true
+   (row_159[1] == "X" and row_159[2] == "X" and row_159[3] == "X") or 
+   (row_357[1] == "X" and row_357[2] == "X" and row_357[3] == "X"):
+   Xwin = true
 
 Ywin=false
    # horizontal
-if (rows_123[1] and rows_123[2] and rows_123[3] == "Y") or
-   (rows_456[1] and rows_456[2] and rows_456[3] == "Y") or
-   (rows_789[1] and rows_789[2] and rows_789[3] == "Y") or
+if (row_123[1] and row_123[2] and row_123[3] == "Y") or
+   (row_456[1] and row_456[2] and row_456[3] == "Y") or
+   (row_789[1] and row_789[2] and row_789[3] == "Y") or
    # vertical
-   (rows_147[1] and rows_147[2] and rows_147[3] == "Y") or
-   (rows_258[1] and rows_258[2] and rows_258[3] == "Y") or
-   (rows_369[1] and rows_369[2] and rows_369[3] == "Y") or
+   (row_147[1] and row_147[2] and row_147[3] == "Y") or
+   (row_258[1] and row_258[2] and row_258[3] == "Y") or
+   (row_369[1] and row_369[2] and row_369[3] == "Y") or
    # diagonal
-   (rows_159[1] and rows_159[2] and rows_159[3] == "Y") or
-   (rows_357[1] and rows_357[2] and rows_357[3] == "Y"):
+   (row_159[1] and row_159[2] and row_159[3] == "Y") or
+   (row_357[1] and row_357[2] and row_357[3] == "Y"):
    Ywin=true
 
 if Xwin:
