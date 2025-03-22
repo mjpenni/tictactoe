@@ -1,8 +1,8 @@
 #tictactoe.py
 
 def select_box(player):
-    box = input("What box number do you want to put an {player}?")
-    row_column() = box_position(str(box))
+    box = input("What box number do you want to put an " + player +"? ")
+    row_column = box_position(str(box))
     board[row_column(0),row_column(1)]=player
 
 def char_pos(square):
@@ -18,27 +18,25 @@ import display_board
 import game_vars
 # from game_board.py import win_rows_build (defunct
 import victory_test
-player1="N"
-while player1 not in 'XO':
-    player1=input('player 1: Do you want to be "X" or "O" ?')
-    if player1=="X":
-        player2="O"
-    elif player1=="O":
-        player2="X"
-    else:
-        print("Please enter X or O.")
-
-print("player 1 will go first")
 go="S"
-turns=0
 while go not in "YNQ":
-    go=input("Are you ready to play?  Y, N or Q: ")
-    if go =='N':
-        # enter again
-        pass
-    elif go == 'Y':
+    go = input("Are you ready to play?  Yy, Nn or Qq: ")
+    go = go.upper()
+    if go == 'Y':
         # start game
-        print_board
+        player1="N"
+        while player1 not in 'XO':
+            player1=input('player 1: Do you want to be "X" or "O" ?')
+            player1=player1.upper()
+            if player1=="X":
+                player2="O"
+            elif player1=="O":
+                player2="X"
+            else:
+                print("Please enter X or O.")
+        print("player 1 will go first")
+        turns=0
+        display_board
         turns += 1
         # player 1 make selection & after 3 check for win
         select_box(player1)
@@ -46,8 +44,11 @@ while go not in "YNQ":
         select_box(player2)
         if turns>=3:
             #check for win
-            win_rows_build()
-            win_test()
+            # win_rows_build() (defunct
+            winner=victory_test()
+    elif go == "N":
+        # repeat how?
+        pass
     else:
         pass
         # small test change
