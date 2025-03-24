@@ -1,12 +1,7 @@
-#tictactoe.py
-
-def select_box(player):
-    box = input("What box number do you want to put an " + player +"? ")
-    row_column = box_position(str(box))
-    board[row_column(0),row_column(1)]=player
+#tictactoe.py 
 
 def char_pos(square):
-    # lookup square (key) & return char_pos & row
+ # lookup square (key) & return char_pos & row
     pass
 
 #-------------------------------------------------------------------------------------
@@ -16,6 +11,8 @@ def char_pos(square):
 import build_board
 import display_board
 import game_vars
+from game_vars import select_box
+
 # from game_board.py import win_rows_build (defunct
 import victory_test
 go="S"
