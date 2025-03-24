@@ -10,48 +10,48 @@
 def victory_test():
     Xwin=false
     # horizontal
-    if (row_123[1] == "X" and row_123[2] == "X" and row_123[3] == "X"): 
+    if (cell[1] == "X" and cell[2] == "X" and cell[3] == "X"): 
        Xwin = true
-    elif (row_456[1] == "X" and row_456[2] == "X" and row_456[3] == "X"): 
+    elif (cell[4] == "X" and cell[5] == "X" and cell[6] == "X"): 
        Xwin = true
-    elif (row_789[1] == "X" and row_789[2] == "X" and row_789[3] == "X"): 
+    elif (cell[7] == "X" and cell[8] == "X" and cell[9] == "X"): 
        Xwin = true
     # vertical
-    elif (row_147[1] == "X" and row_147[2] == "X" and row_147[3] == "X"): 
+    elif (cell[1] == "X" and cell[4] == "X" and cell[7] == "X"): 
        Xwin = true
-    elif (row_258[1] == "X" and row_258[2] == "X" and row_258[3] == "X"): 
+    elif (cell[2] == "X" and cell[5] == "X" and cell[8] == "X"): 
        Xwin = true
-    elif (row_369[1] == "X" and row_369[2] == "X" and row_369[3] == "X"): 
+    elif (cell[3] == "X" and cell[6] == X" and cell[9] == "X"): 
        Xwin = true
     # diagonal
-    elif (row_159[1] == "X" and row_159[2] == "X" and row_159[3] == "X"): 
+    elif (cell[1] == "X" and cell[5] == "X" and cell[9] == "X"): 
        Xwin = true
-    elif (row_357[1] == "X" and row_357[2] == "X" and row_357[3] == "X"):
+    elif (cell[3] == "X" and cell[5] == "X" and cell[7] == "X"):
        Xwin = true
     else:
        Xwin = false
-    Ywin=false
+    Owin=false
     # horizontal
-    if (row_123[1] == "Y" and row_123[2] == "Y" and row_123[3] == "Y"): 
-       Ywin = true
-    elif (row_456[1] == "Y" and row_456[2] == "Y" and row_456[3] == "Y"): 
-       Ywin = true
-    elif (row_789[1] == "Y" and row_789[2] == "Y" and row_789[3] == "Y"): 
-       Ywin = true
+    if (cell[1] == "O" and cell[2] == "O" and cell[3] == "O"): 
+       Owin = true
+    elif (cell[4] == "O" and cell[5] == "O" and cell[6] == "O"): 
+       Owin = true
+    elif (cell[7] == "O" and cell[8] == "O" and cell[9] == "O"): 
+       Owin = true
     # vertical
-    elif (row_147[1] == "Y" and row_147[2] == "Y" and row_147[3] == "Y"): 
-       Ywin = true
-    elif (row_258[1] == "Y" and row_258[2] == "Y" and row_258[3] == "Y"): 
-       Ywin = true
-    elif (row_369[1] == "Y" and row_369[2] == "Y" and row_369[3] == "Y"): 
-       Ywin = true
+    elif (cell[1] == "O" and cell[4] == "O" and cell[7] == "O"): 
+       Owin = true
+    elif (cell[2] == "O" and cell[5] == "O" and cell[8] == "O"): 
+       Owin = true
+    elif (cell[3] == "O" and cell[6] == "O" and cell[9] == "O"): 
+       Owin = true
     # diagonal
-    elif (row_159[1] == "Y" and row_159[2] == "Y" and row_159[3] == "Y"): 
-       Ywin = true
-    elif (row_357[1] == "Y" and row_357[2] == "Y" and row_357[3] == "Y"):
-       Ywin = true
+    elif (cell[1] == "O" and cell[5] == "O" and cell[9] == "O"): 
+       Owin = true
+    elif (cell[3] == "O" and cell[5] == "O" and cell[7] == "O"):
+       Owin = true
     else:
-       Ywin = false
+       Owin = false
 
     if Xwin:
        return "X"
