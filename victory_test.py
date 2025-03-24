@@ -10,18 +10,18 @@
 def victory_test():
     Xwin=false
     # horizontal
-    if (cell[1] == "X" and cell[2] == "X" and cell[3] == "X"): 
+    if (grid["cell[1]"] == "X" and grid["cell[2]"] == "X" and grid["cell[3]"]== "X"): 
        Xwin = true
-    elif (cell[4] == "X" and cell[5] == "X" and cell[6] == "X"): 
+    elif (grid["cell[4]"] == "X" and grid["cell[5]"] == "X" and grid["cell[6]"]== "X"): 
        Xwin = true
-    elif (cell[7] == "X" and cell[8] == "X" and cell[9] == "X"): 
+    elif (grid["cell[7]"] == "X" and grid["cell[8]"] == "X" and grid["cell[9]"]== "X"): 
        Xwin = true
     # vertical
-    elif (cell[1] == "X" and cell[4] == "X" and cell[7] == "X"): 
+    elif (grid["cell[1]"] == "X" and grid["cell[4]"] == "X" and grid["cell[7]"]== "X"): 
        Xwin = true
-    elif (cell[2] == "X" and cell[5] == "X" and cell[8] == "X"): 
+    elif (grid["cell[2]"] == "X" and grid["cell[5]"] == "X" and grid["cell[8]"]== "X"): 
        Xwin = true
-    elif (cell[3] == "X" and cell[6] == X" and cell[9] == "X"): 
+    elif (grid["cell[3]"] == "X" and grid["cell[6]"] == "X" and grid["cell[9]"]== "X"): 
        Xwin = true
     # diagonal
     elif (cell[1] == "X" and cell[5] == "X" and cell[9] == "X"): 
@@ -55,7 +55,9 @@ def victory_test():
 
     if Xwin:
        return "X"
-    if Ywin:
+    elif Owin:
        return "O"
+    else:
+       return "!"
 
 # end of function.
