@@ -4,10 +4,10 @@
 #check vertical   rows: 147, 258, 369
 #check diagonal   rows: 159, 357
 
-#to start: win=false
-#each row is checked for 3 matching (X or O) entries
-#1 of 8 successful tests mean victory: win=true
 def victory_test():
+    #to start: win=false
+    #each row is checked for 3 matching (X or O) entries
+    #1 of 8 successful tests mean victory: win=true
     Xwin=false
     # horizontal
     if (grid["cell[1]"] == "X" and grid["cell[2]"] == "X" and grid["cell[3]"]== "X"): 
