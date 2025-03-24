@@ -17,4 +17,7 @@ win_0 = 'OOO'
 
 #dictionary
 grid={"cell[1]": "!","cell[2]": "!","cell[3]": "!","cell[4]": "!","cell[5]": "!","cell[6]": "!","cell[7]": "!","cell[8]": "!", "cell[9]": "!"}
-
+def select_box(player):
+    box = input("What box number do you want to put an " + player +"? ")
+    # row_column = box_pos(str(box))
+    grid["cell["+str(box)+"]"]= player
