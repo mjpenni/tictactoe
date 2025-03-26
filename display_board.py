@@ -1,7 +1,8 @@
-def display_board():
-    print (board_key[0])
-    print (board_key[1])
-    print (board_key[2])
-    print (board_key[3])
-    print (board_key[4])
+def display_board(test):
+    grid = test
+    print (grid[0])
+    print (grid[1])
+    print (grid[2])
+    print (grid[3])
+    print (grid[4])
     
