@@ -1,4 +1,4 @@
-#tictactoe.py (copy of)
+#tictactoe.py 
 
 def char_pos(square):
  # lookup square (key) & return char_pos & row
@@ -7,14 +7,10 @@ def char_pos(square):
 #-------------------------------------------------------------------------------------
     
 #main
-# import sim_print eh?
 from build_board import build_board
 from display_board import display_board
-#import game_vars
 from game_vars import select_box
 from game_vars import game_vars
-
-# from game_board.py import win_rows_build (defunct
 from victory_test import victory_test
 go="S"
 while go not in "YNQ":
