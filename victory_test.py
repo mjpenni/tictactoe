@@ -10,14 +10,13 @@ def victory_test():
     #1 of 8 successful tests mean victory: win=true
     Xwin=false
     # horizontal
-    if (grid["cell[1]"] == "X" and grid["cell[2]"] == "X" and grid["cell[3]"]== "X"): 
-       Xwin = true
-    elif (grid["cell[4]"] == "X" and grid["cell[5]"] == "X" and grid["cell[6]"]== "X"): 
-       Xwin = true
-    elif (grid["cell[7]"] == "X" and grid["cell[8]"] == "X" and grid["cell[9]"]== "X"): 
+    row_123 = str(grid["cell[1]"]) + str(grid["cell[2]"]) + str(grid["cell[3]"]) 
+    row_456 = str(grid["cell[4]"]) + str(grid["cell[5]"]) + str(grid["cell[6]"]) 
+    row_789 = str(grid["cell[7]"]) + str(grid["cell[8]"]) + str(grid["cell[9]"]) 
+    if (row_123 or row_456 or row789) == "XXX":
        Xwin = true
     # vertical
-    elif (grid["cell[1]"] == "X" and grid["cell[4]"] == "X" and grid["cell[7]"]== "X"): 
+    row_147 = str(grid["cell[1]"]) + str(grid["cell[4]"]) + str(grid["cell[7]"]) 
        Xwin = true
     elif (grid["cell[2]"] == "X" and grid["cell[5]"] == "X" and grid["cell[8]"]== "X"): 
        Xwin = true
