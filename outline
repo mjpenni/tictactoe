@@ -2,6 +2,11 @@ build board grid # build_board.py
 display board (empty or in play) # display_board.py
 set all grid variables to "!", that is neither X or O. #game_vars.py
 1=X first player player1, 2=0 second player player2
+
+things to remember:
+    cell selection should be seperate from board display
+    variable scope
+    
 for turns = 1,2.3:
     first player player1 selects location
     Display 'X' in selected location
